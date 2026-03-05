@@ -1,1 +1,56 @@
+##Q1.c Report the total number of images before and after filtering##
+
+Total images before filtering: 9216
+Total images after filtering: 8015
+
+##Q2. Visualizing class distribution and training-testing sample output##
+
+--- Dataset Label Distribution ---
+category
+Cropland      5474
+Built-up      1778
+Vegetation     754
+Water            7
+Others           2
+Name: count, dtype: int64
+
+Training samples: 4809
+Testing samples: 3206
+
+
+##Q3. Model Training, Accuracy-F1 score and Confusion matrix##
+
+Starting Training...
+Epoch 1/15 | Train Loss: 0.6324 | Val Loss: 0.3733 | Val Acc: 88.57%
+Epoch 2/15 | Train Loss: 0.1517 | Val Loss: 0.3951 | Val Acc: 89.81%
+Epoch 3/15 | Train Loss: 0.0514 | Val Loss: 0.4043 | Val Acc: 90.44%
+Epoch 4/15 | Train Loss: 0.0213 | Val Loss: 0.5212 | Val Acc: 91.37%
+Epoch 5/15 | Train Loss: 0.0121 | Val Loss: 0.5037 | Val Acc: 91.68%
+Epoch 6/15 | Train Loss: 0.0070 | Val Loss: 0.5053 | Val Acc: 91.58%
+Epoch 7/15 | Train Loss: 0.0061 | Val Loss: 0.5909 | Val Acc: 91.79%
+Epoch 8/15 | Train Loss: 0.0061 | Val Loss: 0.5435 | Val Acc: 90.85%
+Epoch 9/15 | Train Loss: 0.0036 | Val Loss: 0.5284 | Val Acc: 92.00%
+Epoch 10/15 | Train Loss: 0.0038 | Val Loss: 0.7348 | Val Acc: 91.58%
+Epoch 11/15 | Train Loss: 0.0666 | Val Loss: 0.5953 | Val Acc: 85.24%
+Epoch 12/15 | Train Loss: 0.1927 | Val Loss: 0.6288 | Val Acc: 85.65%
+Epoch 13/15 | Train Loss: 0.1047 | Val Loss: 0.5029 | Val Acc: 91.06%
+Epoch 14/15 | Train Loss: 0.0307 | Val Loss: 0.4781 | Val Acc: 91.89%
+Epoch 15/15 | Train Loss: 0.0186 | Val Loss: 0.5336 | Val Acc: 92.52%
+Training Complete!
+
+Final Test Accuracy: 0.9286
+Final F1-Score (Weighted): 0.9279
+
+Detailed Classification Report:
+              precision    recall  f1-score   support
+
+  Vegetation       0.77      0.71      0.74       301
+    Cropland       0.96      0.96      0.96      2190
+    Built-up       0.89      0.91      0.90       711
+       Water       1.00      0.67      0.80         3
+      Others       0.00      0.00      0.00         1
+
+    accuracy                           0.93      3206
+   macro avg       0.72      0.65      0.68      3206
+weighted avg       0.93      0.93      0.93      3206
 
